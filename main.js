@@ -29,9 +29,7 @@ let generatePwd = () => {
 	let pwdLen = parseInt(pwdLength.value);
 	let randPassword = Array(pwdLen)
 		.fill(pwdChars)
-		.map(function (x) {
-			return x[Math.floor(Math.random() * x.length)];
-		})
+		.map((x) => x[Math.floor(Math.random() * x.length)])
 		.join('');
 	document.getElementById('result').innerHTML = randPassword;
 };
